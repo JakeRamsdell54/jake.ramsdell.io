@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set character encoding and define viewport for responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the page -->
+    <title>Alaska Trip</title>
+    <!-- Link to external stylesheet for styling -->
+    <link rel="stylesheet" type="text/css" href="transformation.css">
+</head>
+<body>
+
+<!-- Navigation bar section -->
+<nav class="navbar">
+    <ul>
+        <!-- Individual navigation items -->
+        <li><a href="#" id="originalMode">Alaska</a></li>
+        <li><a href="#" id="transformedMode">Exit Glacier</a></li>
+        <li><a href="#" id="thirdMode">Kenai Fjords</a></li>
+    </ul>
+</nav>
+
+<!-- Main content container -->
+<div class="container" id="interactiveContainer">
+    <!-- Original content that gets dynamically changed by JavaScript -->
+    <h1>Original Mode</h1>
+    <p id="story">This is the initial content.</p>
+    <!-- Image element that may be transformed by JavaScript -->
+    <img src="alaska1.jpg" alt="Original Image" id="transformImage">
+    <!-- Video element that may be transformed by JavaScript -->
+    <video src="alaskavid.mp4" alt="Kenai Fjords video with Glacier" id="transformVideo" style="display: none; width: 50%;" autoplay muted loop controls></video>
+</div>
+
+<!-- External JavaScript library (jQuery) -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<!-- Custom JavaScript file for content transformation -->
+<script src="transformation.js"></script>
+
+</body>
+</html>
