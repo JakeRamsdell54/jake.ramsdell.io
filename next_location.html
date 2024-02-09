@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Next Location Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="mobile.css"> <!-- Link to the same CSS file used in the main page -->
+</head>
+<body>
+
+  <!-- Example: Trivia Question -->
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h2>Trivia Question</h2>
+        <p id="questionText"></p> <!-- Display the current question here -->
+        <div class="form-group">
+          <label for="answerInput">Your Answer:</label>
+          <input type="text" class="form-control" id="answerInput">
+        </div>
+        <button id="submitAnswerBtn" class="btn btn-primary">Submit Answer</button>
+        <div id="congratsMessage" style="display: none;">
+          <p>Congratulations! You have answered all the questions correctly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Define an array of trivia questions and their correct answers related to Western Washington University
+    const triviaQuestions = [
+      { question: "What is the mascot of Western Washington University?", answer: "Vikings" },
+      { question: "In what year was Western Washington University founded?", answer: "1893" },
+      { question: "What is the name of the main library at Western Washington University?", answer: "Wilson library" }
+    ];
+
+    // Initialize the index to keep track of the current question
+    let currentQuestionIndex = 0;
+
+    // Function to display the current question
+    function displayCurrentQuestion() {
+      if (currentQuestionIndex < triviaQuestions.length) {
+        const currentQuestion = triviaQuestions[currentQuestionIndex];
+        document.getElementById('questionText').textContent = currentQuestion.question;
+      } else {
+        alert('All questions have been answered.');
+        console.log('All questions have been answered.');
+      }
+    }
+
+    // Function to handle submitting the answer to a question
+    function submitAnswer() {
+      const userAnswer = document.getElementById('answerInput').value.trim();
+      const currentQuestion = triviaQuestions[currentQuestionIndex];
+
+      if (userAnswer.toLowerCase() === currentQuestion.answer.toLowerCase()) {
+        alert('Congratulations! Your answer is correct.');
+
+        if (currentQuestionIndex < triviaQuestions.length - 1) {
+          // If there are more questions, move to the next question
+          currentQuestionIndex++;
+          displayCurrentQuestion();
+        } else {
+          // If all questions are answered correctly, show the congratulations message
+          document.getElementById('congratsMessage').style.display = 'block';
+          console.log('Showing congratulations message.');
+        }
+      } else {
+        alert('Sorry, your answer is incorrect. Please try again.');
+      }
+    }
+
+    // Event listener for submitting the answer
+    document.getElementById('submitAnswerBtn').addEventListener('click', submitAnswer);
+
+    // Display the first question when the page loads
+    displayCurrentQuestion();
+  </script>
+</body>
+</html>
