@@ -1,0 +1,57 @@
+
+#chat-container {
+    width: 400px;
+    max-height: 500px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 0 auto; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+}
+
+
+#chat-log {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.message {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.user {
+    background-color: #f0f0f0;
+    align-self: flex-end;
+}
+
+.eliza {
+    background-color: #cceeff;
+}
+
+
+#user-input {
+    width: calc(100% - 70px);
+    margin-right: 10px;
+    padding: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#send-button {
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+#reset-button {
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
