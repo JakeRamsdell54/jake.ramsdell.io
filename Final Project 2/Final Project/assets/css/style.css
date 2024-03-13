@@ -1,0 +1,774 @@
+/* Body styles */
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #272829;
+}
+
+/* Link styles */
+a {
+  color: #149ddd;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #37b3ed;
+  text-decoration: none;
+}
+
+/* Heading styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+/* Back-to-top button styles */
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #149ddd;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: #2eafec;
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Header styles */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  transition: all ease-in-out 0.5s;
+  z-index: 9997;
+  padding: 0 15px;
+  background: #040b14;
+  overflow-y: auto;
+}
+
+#header .profile img {
+  margin: 15px auto;
+  display: block;
+  width: 120px;
+  border: 8px solid #2c2f3f;
+}
+
+#header .profile h1 {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  -moz-text-align-last: center;
+  text-align-last: center;
+  font-family: "Poppins", sans-serif;
+}
+
+#header .profile h1 a,
+#header .profile h1 a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#header .profile .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #212431;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#header .profile .social-links a:hover {
+  background: #149ddd;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Main content styles */
+#main {
+  margin-left: 300px;
+}
+
+.container,
+.container-fluid {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+@media (max-width: 1199px) {
+  #header {
+    left: -300px;
+  }
+
+  #main {
+    margin-left: 0;
+  }
+
+  .container,
+  .container-fluid {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+/* Navigation menu styles */
+.nav-menu {
+  padding: 30px 0 0 0;
+}
+
+.nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu>ul>li {
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-menu a,
+.nav-menu a:focus {
+  display: flex;
+  align-items: center;
+  color: #a8a9b4;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+.nav-menu a i,
+.nav-menu a:focus i {
+  font-size: 24px;
+  padding-right: 8px;
+  color: #6f7180;
+}
+
+.nav-menu a:hover,
+.nav-menu .active,
+.nav-menu .active:focus,
+.nav-menu li:hover>a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-menu a:hover i,
+.nav-menu .active i,
+.nav-menu .active:focus i,
+.nav-menu li:hover>a i {
+  color: #149ddd;
+}
+
+/* Mobile navigation toggle styles */
+.mobile-nav-toggle {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  z-index: 9998;
+  border: 0;
+  font-size: 24px;
+  transition: all 0.4s;
+  outline: none !important;
+  background-color: #149ddd;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+
+/* Styles for mobile navigation when active */
+.mobile-nav-active {
+  overflow: hidden;
+}
+
+/* Adjustments for header when mobile navigation is active */
+.mobile-nav-active #header {
+  left: 0;
+}
+
+/* Styles for hero section */
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/jakeimg.jpg") top center;
+  background-size: cover;
+}
+
+/* Overlay for hero section */
+#hero:before {
+  content: "";
+  background: rgba(5, 13, 24, 0.3);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+/* Container for hero content */
+#hero .hero-container {
+  position: relative;
+  z-index: 2;
+  min-width: 300px;
+}
+
+/* Styles for hero heading */
+#hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+}
+
+/* Styles for hero paragraph */
+#hero p {
+  color: #fff;
+  margin-bottom: 50px;
+  font-size: 26px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Styles for specific span elements in hero paragraph */
+#hero p span {
+  color: #fff;
+  padding-bottom: 4px;
+  letter-spacing: 1px;
+  border-bottom: 3px solid #149ddd;
+}
+
+/* Media query for hero section on larger screens */
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+/* Media query for hero section on smaller screens */
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+/* Styles for generic sections */
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+/* Styles for sections with background */
+.section-bg {
+  background: #f5f8fd;
+}
+
+/* Styles for section titles */
+.section-title {
+  padding-bottom: 30px;
+}
+
+/* Styles for section title headings */
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #173b6c;
+}
+
+/* Styles for section title headings with decorative line */
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #149ddd;
+  bottom: 0;
+  left: 0;
+}
+
+/* Styles for section title paragraphs */
+.section-title p {
+  margin-bottom: 0;
+}
+
+/* Styles for content in 'about' section */
+.about .content h3 {
+  font-weight: 700;
+  font-size: 26px;
+  color: #173b6c;
+}
+
+/* Styles for unordered lists in 'about' section content */
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Styles for list items in 'about' section content */
+.about .content ul li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* Styles for strong elements in 'about' section content */
+.about .content ul strong {
+  margin-right: 10px;
+}
+
+/* Styles for italic elements in 'about' section content */
+.about .content ul i {
+  font-size: 16px;
+  margin-right: 5px;
+  color: #149ddd;
+  line-height: 0;
+}
+
+/* Styles for last paragraph in 'about' section content */
+.about .content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Styles for progress bars in 'skills' section */
+.skills .progress {
+  height: 60px;
+  display: block;
+  background: none;
+  border-radius: 0;
+}
+
+/* Styles for skill names in 'skills' section */
+.skills .progress .skill {
+  padding: 0;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #050d18;
+}
+
+/* Styles for skill values in 'skills' section */
+.skills .progress .skill .val {
+  float: right;
+  font-style: normal;
+}
+
+/* Styles for progress bar container in 'skills' section */
+.skills .progress-bar-wrap {
+  background: #dce8f8;
+  height: 10px;
+}
+
+/* Styles for progress bars in 'skills' section */
+.skills .progress-bar {
+  width: 1px;
+  height: 10px;
+  transition: 0.9s;
+  background-color: #149ddd;
+}
+
+/* Styles for titles in 'resume' section */
+.resume .resume-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #050d18;
+}
+
+/* Styles for individual items in 'resume' section */
+.resume .resume-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #1f5297;
+  position: relative;
+}
+
+/* Styles for headings in 'resume' section */
+.resume .resume-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #050d18;
+  margin-bottom: 10px;
+}
+
+
+/* Styles for headings in 'resume' section */
+.resume .resume-item h5 {
+  font-size: 16px;
+  background: #e4edf9;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Styles for unordered lists in 'resume' section */
+.resume .resume-item ul {
+  padding-left: 20px;
+}
+
+/* Styles for list items in 'resume' section */
+.resume .resume-item ul li {
+  padding-bottom: 10px;
+}
+
+/* Styles for last 'resume' item */
+.resume .resume-item:last-child {
+  padding-bottom: 0;
+}
+
+/* Styles for decorative circle before 'resume' items */
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #1f5297;
+}
+
+
+/* Styles for contact section */
+.contact {
+  padding-bottom: 130px;
+}
+
+/* Styles for contact information container */
+.contact .info {
+  padding: 30px;
+  background: #fff;
+  width: 100%;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+}
+
+/* Styles for contact information icons */
+.contact .info i {
+  font-size: 20px;
+  color: #149ddd;
+  float: left;
+  width: 44px;
+  height: 44px;
+  background: #dff3fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Styles for contact information headings */
+.contact .info h4 {
+  padding: 0 0 0 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #050d18;
+}
+
+/* Styles for contact information paragraphs */
+.contact .info p {
+  padding: 0 0 10px 60px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #173b6c;
+}
+
+/* Additional styles for email paragraph */
+.contact .info .email p {
+  padding-top: 5px;
+}
+
+/* Styles for social links container */
+.contact .info .social-links {
+  padding-left: 60px;
+}
+
+/* Styles for individual social links */
+.contact .info .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+  margin-right: 10px;
+}
+
+/* Hover styles for social links */
+.contact .info .social-links a:hover {
+  background: #149ddd;
+  color: #fff;
+}
+
+/* Hover styles for contact information icons */
+.contact .info .email:hover i,
+.contact .info .address:hover i,
+.contact .info .phone:hover i {
+  background: #149ddd;
+  color: #fff;
+}
+
+/* Styles for PHP email form container */
+.contact .php-email-form {
+  width: 100%;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+}
+
+/* Styles for form groups within PHP email form */
+.contact .php-email-form .form-group {
+  padding-bottom: 8px;
+}
+
+/* Styles for validation messages within PHP email form */
+.contact .php-email-form .validate {
+  display: none;
+  color: red;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+/* Styles for error messages within PHP email form */
+.contact .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+/* Additional styles for error message line breaks */
+.contact .php-email-form .error-message br+br {
+  margin-top: 25px;
+}
+
+/* Styles for success message within PHP email form */
+.contact .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+/* Styles for loading message within PHP email form */
+.contact .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Styles for loading animation within PHP email form */
+.contact .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #18d26e;
+  border-top-color: #eee;
+  animation: animate-loading 1s linear infinite;
+}
+
+/* Additional styles for form groups within PHP email form */
+.contact .php-email-form .form-group {
+  margin-bottom: 15px;
+}
+
+/* Styles for labels within PHP email form */
+.contact .php-email-form label {
+  padding-bottom: 8px;
+}
+
+/* Styles for input fields within PHP email form */
+.contact .php-email-form input,
+.contact .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+/* Additional styles for input fields within PHP email form */
+.contact .php-email-form input {
+  height: 44px;
+}
+
+/* Styles for textarea within PHP email form */
+.contact .php-email-form textarea {
+  padding: 10px 15px;
+}
+
+/* Styles for submit button within PHP email form */
+.contact .php-email-form button[type=submit] {
+  background: #149ddd;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+
+/* Hover styles for submit button within PHP email form */
+.contact .php-email-form button[type=submit]:hover {
+  background: #37b3ed;
+}
+
+/* Keyframe animation for loading */
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Styles for breadcrumbs section */
+.breadcrumbs {
+  padding: 20px 0;
+  background: #f9f9f9;
+}
+
+/* Styles for breadcrumb heading */
+.breadcrumbs h2 {
+  font-size: 26px;
+  font-weight: 300;
+}
+
+/* Styles for breadcrumb list */
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+}
+
+/* Additional styles for breadcrumb list items */
+.breadcrumbs ol li+li {
+  padding-left: 10px;
+}
+
+/* Additional styles for breadcrumb list item separators */
+.breadcrumbs ol li+li::before {
+  display: inline-block;
+  padding-right: 10px;
+  color: #0e2442;
+  content: "/";
+}
+
+/* Responsive styles for breadcrumbs section */
+@media (max-width: 768px) {
+  .breadcrumbs .d-flex {
+    display: block !important;
+  }
+
+  .breadcrumbs ol {
+    display: block;
+  }
+
+  .breadcrumbs ol li {
+    display: inline-block;
+  }
+}
+
+
+/* Styles for footer section */
+#footer {
+  padding: 15px;
+  color: #f4f6fd;
+  font-size: 14px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  z-index: 9999;
+  background: #040b14;
+}
+
+/* Styles for copyright information in footer */
+#footer .copyright {
+  text-align: center;
+}
+
+/* Styles for credits information in footer */
+#footer .credits {
+  padding-top: 5px;
+  text-align: center;
+  font-size: 13px;
+  color: #eaebf0;
+}
+
+/* Responsive styles for footer section */
+@media (max-width: 1199px) {
+  #footer {
+    position: static;
+    width: auto;
+    padding-right: 20px 15px;
+  }
+}
